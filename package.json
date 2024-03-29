@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "json-server": "^1.0.0-alpha.23"
+  },
+  "name": "restaurant_forsvinn",
+  "description": "Run json-server:",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "json-server --watch db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

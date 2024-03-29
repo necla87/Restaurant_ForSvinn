@@ -1,0 +1,173 @@
+{
+    "menu": {
+      "main_course": [
+        {
+          "category": "Main Course",
+          "name": "Köfte",
+          "description": "Grilled Turkish meatballs made with a blend of ground beef and lamb, served with rice and grilled vegetables.",
+          "price": 150,
+          "sold_out": false
+        },
+        {
+          "category": "Main Course",
+          "name": "Iskender Kebab",
+          "description": "Sliced grilled lamb served over pieces of pide bread, topped with tomato sauce and yogurt.",
+          "price": 180,
+          "sold_out": false
+        },
+        {
+          "category": "Main Course",
+          "name": "Adana Kebab",
+          "description": "Spicy minced lamb kebab served with grilled vegetables and rice.",
+          "price": 170,
+          "sold_out": false
+        },
+        {
+          "category": "Main Course",
+          "name": "Mantı",
+          "description": "Turkish dumplings filled with seasoned ground beef, topped with yogurt and garlic-infused butter.",
+          "price": 160,
+          "sold_out": false
+        },
+        {
+          "category": "Main Course",
+          "name": "Hünkar Beğendi",
+          "description": "Slow-cooked lamb served over a bed of creamy eggplant puree.",
+          "price": 190,
+          "sold_out": false
+        },
+        {
+          "category": "Main Course",
+          "name": "Pide",
+          "description": "Turkish flatbread topped with a variety of ingredients such as cheese, ground meat, and vegetables.",
+          "price": 140,
+          "sold_out": false
+        },
+        {
+          "category": "main_course",
+          "name": "jjviyvyj",
+          "description": "jjbbjvgkyfkcuyfky",
+          "price": 250,
+          "sold_out": false
+        },
+        {
+          "category": "main_course",
+          "name": "ghjm hjmtjhu",
+          "description": "vbhnhm hjm",
+          "price": 80,
+          "sold_out": false
+        }
+      ],
+      "starter": [
+        {
+          "category": "Starter",
+          "name": "Çılbır",
+          "description": "Poached eggs served over yogurt with melted butter and garlic, topped with Aleppo pepper.",
+          "price": 110,
+          "sold_out": true
+        },
+        {
+          "category": "Starter",
+          "name": "Sigara Böreği",
+          "description": "Filo pastry rolls stuffed with feta cheese and parsley, fried until crispy.",
+          "price": 90,
+          "sold_out": false
+        },
+        {
+          "category": "Starter",
+          "name": "Cacık",
+          "description": "Refreshing yogurt and cucumber dip seasoned with garlic and mint.",
+          "price": 80,
+          "sold_out": false
+        },
+        {
+          "category": "Starter",
+          "name": "Lahmacun",
+          "description": "Thin, crispy dough topped with a spiced mixture of minced meat, vegetables, and herbs.",
+          "price": 100,
+          "sold_out": false
+        },
+        {
+          "category": "starter",
+          "name": "Dolma",
+          "description": "Grape leaves stuffed with a mixture of rice, pine nuts, and herbs, served with lemon wedges.",
+          "price": 170,
+          "sold_out": false
+        }
+      ],
+      "dessert": [
+        {
+          "category": "Dessert",
+          "name": "Baklava",
+          "description": "Layers of phyllo dough filled with chopped nuts and sweetened with honey syrup.",
+          "price": 100,
+          "sold_out": false
+        },
+        {
+          "category": "Dessert",
+          "name": "Sütlaç",
+          "description": "Traditional Turkish rice pudding flavored with vanilla and cinnamon, served chilled.",
+          "price": 80,
+          "sold_out": false
+        },
+        {
+          "category": "Dessert",
+          "name": "Revani",
+          "description": "Semolina cake soaked in syrup, flavored with orange or lemon.",
+          "price": 90,
+          "sold_out": false
+        },
+        {
+          "category": "Dessert",
+          "name": "Dondurma",
+          "description": "Turkish ice cream made with salep, a flour made from wild orchid tubers, known for its chewy texture.",
+          "price": 120,
+          "sold_out": false
+        },
+        {
+          "category": "Dessert",
+          "name": "Künefe",
+          "description": "Shredded phyllo dough filled with sweet cheese, baked until crispy, and soaked in syrup.",
+          "price": 110,
+          "sold_out": false
+        }
+      ],
+      "drink": [
+        {
+          "category": "Drink",
+          "name": "Turkish Tea",
+          "description": "Strong, black tea served in small tulip-shaped glasses.",
+          "price": 40,
+          "sold_out": false
+        },
+        {
+          "category": "Drink",
+          "name": "Ayran",
+          "description": "Refreshing yogurt drink mixed with water and a pinch of salt.",
+          "price": 30,
+          "sold_out": false
+        },
+        {
+          "category": "Drink",
+          "name": "Şalgam",
+          "description": "Fermented turnip juice, flavored with spices, served cold.",
+          "price": 35,
+          "sold_out": true
+        },
+        {
+          "category": "Drink",
+          "name": "Turkish Coffee",
+          "description": "A traditional unfiltered coffee brewed in a cezve, served with foam on top.",
+          "price": 45,
+          "sold_out": false
+        },
+        {
+          "category": "drink",
+          "name": "kdhvkdh ",
+          "description": "akshdbl er",
+          "price": 39,
+          "sold_out": false
+        }
+      ]
+    }
+  }

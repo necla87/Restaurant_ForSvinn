@@ -1,0 +1,169 @@
+/* Reset some default styles for better consistency across browsers */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  /* Set a background color for the body */
+  color: #ffffff;
+  /* Set a default text color */
+  text-align: center;
+}
+
+header {
+  background-color: #44a8709c;
+  /* Set a background color for the header */
+  color: #fff;
+  /* Set text color for the header */
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  /* Set link color in the navigation */
+  text-decoration: none;
+  margin-right: 20px;
+}
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu-category {
+  width: calc(50% - 20px);
+  /* Adjust as needed */
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  /* Add some space between categories */
+}
+
+.menu-category h2 {
+  text-align: center;
+  background-color: #e9ecef;
+  /* Lighter background color for the category title */
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.menu-items {
+  padding: 10px;
+}
+
+.menu-item {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.menu-item p {
+  color: #555;
+}
+
+.menu-item p.price {
+  font-weight: bold;
+}
+/* Adjust background image properties */
+body {
+  background-image: url('image_restaurant.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Styles for admin login container */
+.admin-login-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#adminLoginForm {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+label {
+  margin-bottom: 5px;
+  
+
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 220px;
+  background-color: #44a870;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+/* Admin page button styles */
+#adminButtons {
+  display: flex;
+  justify-content: center;
+  /* Center the buttons horizontally */
+  margin-top: 200px;
+  /* Add margin to push the buttons down from the header */
+}
+
+#adminButtons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#adminButtons button:hover {
+  background-color: #45a049;
+}
