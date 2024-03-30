@@ -2,7 +2,8 @@ import addItemPage from './pages/addItemPage.js';
 import editItemPage from './pages/editItemPage.js';
 import deleteItemPage from './pages/deleteItemPage.js';
 import adminLoginPage from './pages/adminLoginPage.js';
-import adminPage from './pages/adminPage.js';
+import adminPage from './pages/adminPage.js'; 
+import { displayMenu } from './app.js';
 
 async function handlePageChange() {
   switch (location.hash) {
@@ -21,7 +22,9 @@ async function handlePageChange() {
     case '#deleteItemPage':
       $('main').html(await deleteItemPage());
       break;
-   
+    case '#menu':
+      $('main').html(await displayMenu());
+      break;
     default:
       $('main').html(await adminPage());
       break;

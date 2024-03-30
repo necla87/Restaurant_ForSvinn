@@ -16,11 +16,19 @@ export default async function editItemPage() {
     editItemPageContainer.append(selectCategory);
 
     const selectItem = $("<select>").attr("id", "editItem");
-    const selectedCategory = selectCategory.val();
-    menuData.menu[selectedCategory].forEach(item => {
-      selectItem.append($("<option>").text(item.name));
-    });
     editItemPageContainer.append(selectItem);
+
+    // Function to update item selection dropdown based on selected category
+    function updateItemSelection(category) {
+      selectItem.empty(); // Clear existing options
+      menuData.menu[category].forEach(item => {
+        selectItem.append($("<option>").text(item.name));
+      });
+    }
+
+    // Initial update of item selection dropdown based on default selected category
+    const defaultCategory = selectCategory.val();
+    updateItemSelection(defaultCategory);
 
     const editForm = $("<form>").attr("id", "editForm");
     editForm.append("<label for='editName'>Name:</label>");
@@ -33,6 +41,12 @@ export default async function editItemPage() {
     editForm.append("<input type='checkbox' id='editSoldOut'>");
     editForm.append("<button type='submit'>Save Changes</button>");
     editItemPageContainer.append(editForm);
+
+    // Event listener for category selection change
+    selectCategory.on("change", function () {
+      const selectedCategory = $(this).val();
+      updateItemSelection(selectedCategory);
+    });
 
     // Event listener for form submission
     editForm.on("submit", async function (event) {

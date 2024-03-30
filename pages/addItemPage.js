@@ -1,6 +1,18 @@
 // Import fetchData and sendData from server-request.js
 import { fetchData, sendData } from '../server-request.js';
 
+// Function to generate a unique ID for a new item
+function generateItemId(menuData) {
+  // Extract the menu items from the menuData
+  const items = Object.values(menuData.menu).flat();
+
+  // Find the maximum existing ID
+  const maxId = items.reduce((max, item) => Math.max(max, item.id), 0);
+
+  // Increment the maximum ID to generate a new unique ID
+  return maxId + 1;
+}
+
 // Function to add a new item to the menu
 export default async function addItemPage() {
   // Define the HTML content for the Add Item page
@@ -10,10 +22,10 @@ export default async function addItemPage() {
             <form id="addItemForm">
                 <label for="category">Category:</label>
                 <select id="category" name="category">
-                    <option value="main_course">Main Course</option>
-                    <option value="starter">Starter</option>
-                    <option value="dessert">Dessert</option>
-                    <option value="drink">Drink</option>
+                    <option value="main_course">main_course</option>
+                    <option value="starter">starter</option>
+                    <option value="dessert">dessert</option>
+                    <option value="drink">drink</option>
                 </select><br><br>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br><br>
@@ -39,33 +51,31 @@ export default async function addItemPage() {
     const description = $('#description').val();
     const price = $('#price').val();
 
-    // Create a new item object
-    const newItem = {
-      category: category,
-      name: name,
-      description: description,
-      price: parseInt(price), // Convert price to integer
-      sold_out: false // By default, the new item is not sold out
-    };
-
     try {
       // Fetch the current menu data
       let menuData = await fetchData();
 
-      // Check if the category exists in the menu data
-      if (menuData.menu.hasOwnProperty(category)) {
-        // Add the new item to the specified category
-        menuData.menu[category].push(newItem);
+      // Generate a new ID for the item
+      const id = generateItemId(menuData);
 
-        // Send the updated menu data to the server
-        await sendData(menuData);
+      // Create a new item object with the generated ID
+      const newItem = {
+        id: id,
+        category: category,
+        name: name,
+        description: description,
+        price: parseInt(price), // Convert price to integer
+        sold_out: false // By default, the new item is not sold out
+      };
 
-        // Redirect to the admin page after adding the item
-        window.location.href = '#admin';
-      } else {
-        // Display an error message if the category does not exist
-        alert('Invalid category');
-      }
+      // Add the new item to the specified category
+      menuData.menu[category].push(newItem);
+
+      // Send the updated menu data to the server
+      await sendData(menuData);
+
+      // Redirect to the admin page after adding the item
+      window.location.href = '#admin';
     } catch (error) {
       console.error('Error adding item:', error);
       // Display an error message to the user

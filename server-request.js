@@ -1,7 +1,7 @@
 // Function to create a new menu item on the server
 export async function createMenuItem(newMenuItem) {
   try {
-    const response = await fetch('menuItems', {
+    const response = await fetch('menu', { // Change 'menuItems' to 'menu'
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ export async function createMenuItem(newMenuItem) {
 // Function to update an existing menu item on the server
 export async function updateMenuItem(category, itemName, updatedData) {
   try {
-    const response = await fetch(`menuItems/${category}/${itemName}`, {
+    const response = await fetch(`menu/${category}/${itemName}`, { // Change 'menuItems' to 'menu'
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -38,10 +38,21 @@ export async function updateMenuItem(category, itemName, updatedData) {
   }
 }
 
+// Function to remove a menu item from the local menu data
+export function removeItemFromMenu(menuData, category, itemName) {
+  if (menuData && menuData.menu && menuData.menu[category]) {
+    const categoryItems = menuData.menu[category];
+    const index = categoryItems.findIndex(item => item.name === itemName);
+    if (index !== -1) {
+      categoryItems.splice(index, 1); // Remove the item from the category
+    }
+  }
+}
+
 // Function to remove a menu item from the server
 export async function removeMenuItem(category, itemName) {
   try {
-    const response = await fetch(`menuItems/${category}/${itemName}`, {
+    const response = await fetch(`http://localhost:3000/menu/${category}/${itemName}`, {
       method: 'DELETE'
     });
     if (!response.ok) {
