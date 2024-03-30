@@ -69,14 +69,14 @@ export async function fetchData() {
 }
 
 // Function to send updated menu data to the server
-export async function sendData(updatedData) {
+export async function sendData(menuData) {
   try {
     const response = await fetch('http://localhost:3000/menu', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(updatedData)
+      body: JSON.stringify(menuData.menu) // Send only the 'menu' object
     });
     if (!response.ok) {
       throw new Error('Failed to send updated data');

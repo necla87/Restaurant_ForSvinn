@@ -30,7 +30,7 @@ export default async function addItemPage() {
   $('main').html(addItemPageContent);
 
   // Add event listener for the form submission
-  $('#addItemForm').submit(async function (event) {
+  $('#addItemForm').on('submit', async function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
     // Extract the form data
