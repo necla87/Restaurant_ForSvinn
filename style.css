@@ -1,4 +1,3 @@
-/* Reset some default styles for better consistency across browsers */
 body,
 h1,
 h2,
@@ -14,17 +13,17 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #f8f8f8;
-  /* Set a background color for the body */
+ 
   color: #ffffff;
-  /* Set a default text color */
+  
   text-align: center;
 }
 
 header {
   background-color: #44a8709c;
-  /* Set a background color for the header */
+
   color: #fff;
-  /* Set text color for the header */
+
   padding: 10px;
 }
 
@@ -36,7 +35,7 @@ nav {
 
 nav a {
   color: #fff;
-  /* Set link color in the navigation */
+  
   text-decoration: none;
   margin-right: 20px;
 }
@@ -48,18 +47,16 @@ nav a {
 
 .menu-category {
   width: calc(50% - 20px);
-  /* Adjust as needed */
+  
   background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  /* Add some space between categories */
 }
 
 .menu-category h2 {
   text-align: center;
   background-color: #e9ecef;
-  /* Lighter background color for the category title */
   padding: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -89,7 +86,7 @@ nav a {
 .menu-item p.price {
   font-weight: bold;
 }
-/* Adjust background image properties */
+
 body {
   background-image: url('image_restaurant.jpg');
   background-size: cover;
@@ -98,7 +95,6 @@ body {
   background-attachment: fixed;
 }
 
-/* Styles for admin login container */
 .admin-login-container {
   max-width: 400px;
   margin: 20px auto;
@@ -137,7 +133,6 @@ button:hover {
   background-color: #45a049;
 }
 
-/* Footer styles */
 footer {
   margin-top: 220px;
   background-color: #44a870;
@@ -145,13 +140,11 @@ footer {
   padding: 10px;
   text-align: center;
 }
-/* Admin page button styles */
+
 #adminButtons {
   display: flex;
   justify-content: center;
-  /* Center the buttons horizontally */
   margin-top: 200px;
-  /* Add margin to push the buttons down from the header */
 }
 
 #adminButtons button {
@@ -166,4 +159,9 @@ footer {
 
 #adminButtons button:hover {
   background-color: #45a049;
+}
+
+.sold-out-label {
+  font-weight: bold;
+  color: red;
 }

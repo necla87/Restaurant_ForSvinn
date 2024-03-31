@@ -6,8 +6,8 @@
         "category": "main_course",
         "name": "Kofte",
         "description": "Grilled Turkish meatballs made with a blend of ground beef and lamb, served with rice and grilled vegetables.",
-        "price": 150,
-        "sold_out": false
+        "price": 190,
+        "sold_out": true
       },
       {
         "id": 2,
@@ -30,7 +30,7 @@
         "category": "main_course",
         "name": "Manti",
         "description": "Turkish dumplings filled with seasoned ground beef, topped with yogurt and garlic-infused butter.",
-        "price": 160,
+        "price": 190,
         "sold_out": false
       },
       {
@@ -57,7 +57,7 @@
         "name": "Cilbir",
         "description": "Poached eggs served over yogurt with melted butter and garlic, topped with Aleppo pepper.",
         "price": 110,
-        "sold_out": true
+        "sold_out": false
       },
       {
         "id": 8,
@@ -81,14 +81,6 @@
         "name": "Lahmacun",
         "description": "Thin, crispy dough topped with a spiced mixture of minced meat, vegetables, and herbs.",
         "price": 100,
-        "sold_out": false
-      },
-      {
-        "id": 11,
-        "category": "starter",
-        "name": "Dolma",
-        "description": "Grape leaves stuffed with a mixture of rice, pine nuts, and herbs, served with lemon wedges.",
-        "price": 170,
         "sold_out": false
       }
     ],
@@ -115,7 +107,7 @@
         "name": "Revani",
         "description": "Semolina cake soaked in syrup, flavored with orange or lemon.",
         "price": 90,
-        "sold_out": false
+        "sold_out": true
       },
       {
         "id": 15,
@@ -157,7 +149,7 @@
         "name": "Salgam",
         "description": "Fermented turnip juice, flavored with spices, served cold.",
         "price": 35,
-        "sold_out": true
+        "sold_out": false
       },
       {
         "id": 20,

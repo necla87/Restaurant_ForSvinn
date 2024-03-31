@@ -1,27 +1,20 @@
-// Import fetchData and sendData from server-request.js
 import { fetchData, sendData } from '../server-request.js';
 
-// Function to generate a unique ID for a new item
 function generateItemId(menuData) {
   // Extract the menu items from the menuData
   const items = Object.values(menuData.menu).flat();
-
-  // Find the maximum existing ID
   const maxId = items.reduce((max, item) => Math.max(max, item.id), 0);
-
-  // Increment the maximum ID to generate a new unique ID
   return maxId + 1;
 }
 
-// Function to add a new item to the menu
 export default async function addItemPage() {
-  // Define the HTML content for the Add Item page
   const addItemPageContent = `
         <div id="addItemPage">
             <h2>Add New Item</h2>
             <form id="addItemForm">
                 <label for="category">Category:</label>
                 <select id="category" name="category">
+                    <option value="" disabled selected>Select Category</option>
                     <option value="main_course">main_course</option>
                     <option value="starter">starter</option>
                     <option value="dessert">dessert</option>
@@ -38,12 +31,10 @@ export default async function addItemPage() {
         </div>
     `;
 
-  // Render the Add Item page content
   $('main').html(addItemPageContent);
 
-  // Add event listener for the form submission
   $('#addItemForm').on('submit', async function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault();
 
     // Extract the form data
     const category = $('#category').val();
@@ -64,21 +55,17 @@ export default async function addItemPage() {
         category: category,
         name: name,
         description: description,
-        price: parseInt(price), // Convert price to integer
-        sold_out: false // By default, the new item is not sold out
+        price: parseInt(price), 
+        sold_out: false //
       };
 
-      // Add the new item to the specified category
       menuData.menu[category].push(newItem);
 
-      // Send the updated menu data to the server
       await sendData(menuData);
 
-      // Redirect to the admin page after adding the item
       window.location.href = '#admin';
     } catch (error) {
       console.error('Error adding item:', error);
-      // Display an error message to the user
       alert('Error adding item. Please try again later.');
     }
   });

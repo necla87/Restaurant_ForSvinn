@@ -1,6 +1,6 @@
 
 export default async function adminLoginPage() {
-  // HTML content for the admin login page
+
   const adminLoginPageHTML = `
     <div class="admin-login-container">
       <h1>Admin Login</h1>
@@ -14,12 +14,10 @@ export default async function adminLoginPage() {
     </div>
   `;
 
-  // Display the admin login page
   $('main').html(adminLoginPageHTML);
 
-  // Add event listener for login form submission
   $('#adminLoginForm').on('submit', async function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     // Get username and password from form inputs
     const username = $('#username').val();
@@ -30,7 +28,7 @@ export default async function adminLoginPage() {
 
     // Redirect to admin page if login successful, otherwise show error message
     if (loggedIn) {
-      window.location.href = '#admin'; // Redirect to admin page
+      window.location.href = '#admin'; 
     } else {
       alert('Invalid username or password. Please try again.'); // Show error message
     }
@@ -44,14 +42,12 @@ export default async function adminLoginPage() {
       password: 'admin12345'
     };
 
-    // Simulate a delay for authentication (you can remove this in a real scenario)
     await new Promise(resolve => setTimeout(resolve, 500));
 
-    // Check if provided credentials match the stored credentials
     if (username === storedCredentials.username && password === storedCredentials.password) {
-      return true; // Authentication successful
+      return true; 
     } else {
-      return false; // Authentication failed
+      return false; 
     }
   }
 }
